@@ -4,154 +4,136 @@ import { cn } from '@/lib/utils';
 
 export default function Schools() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-bg-light">
       {/* Background Glows */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[120px] -translate-y-1/2 -z-10" />
-      <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-brand-secondary/5 rounded-full blur-[150px] -z-10" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-slate-100 rounded-full blur-[120px] -translate-y-1/2 -z-10" />
+      <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-slate-100 rounded-full blur-[150px] -z-10" />
 
       {/* Header */}
-      <section className="section-padding text-center max-w-5xl mx-auto space-y-8 pt-32">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="inline-block px-6 py-2 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-brand-primary text-[10px] font-black uppercase tracking-[0.4em] mb-4"
-        >
+      <section className="section-padding text-center max-w-4xl mx-auto space-y-6 pt-32">
+        <div className="inline-block px-4 py-1.5 border-b-2 border-brand-secondary text-brand-primary text-[11px] font-bold uppercase tracking-widest mb-2 bg-brand-secondary/10">
           Institutional Partnership
-        </motion.div>
-        <h1 className="text-7xl md:text-9xl font-black text-white tracking-tighter leading-[0.85]">
-          For <span className="text-gradient">Schools</span>
+        </div>
+        <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight leading-tight">
+          For <span className="text-brand-primary">Schools</span>
         </h1>
-        <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
           Building a culture of research and deep thinking within your institution.
         </p>
       </section>
 
       {/* Why Schools Join */}
-      <section className="section-padding">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24 space-y-6">
-            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter">Why Schools Join</h2>
-            <div className="w-48 h-2 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full" />
+      <section className="section-padding bg-slate-50 border-y border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl font-black text-slate-900 tracking-tight">Why Schools Join</h2>
+            <div className="w-24 h-1 bg-brand-primary mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 icon: School,
                 title: "Aligns with NEP 2020",
-                desc: "Directly implements the inquiry-based and research-oriented learning goals of the New Education Policy.",
-                color: "from-blue-500 to-indigo-500"
+                desc: "Directly implements the inquiry-based and research-oriented learning goals of the New Education Policy."
               },
               {
                 icon: Lightbulb,
                 title: "Research Culture",
-                desc: "Transforms the school environment from exam-centric to research-centric, fostering curiosity.",
-                color: "from-purple-500 to-pink-500"
+                desc: "Transforms the school environment from exam-centric to research-centric, fostering curiosity."
               },
               {
                 icon: Brain,
                 title: "Student Thinking",
-                desc: "Significantly improves students' ability to analyze, synthesize, and evaluate information.",
-                color: "from-emerald-500 to-teal-500"
+                desc: "Significantly improves students' ability to analyze, synthesize, and evaluate information."
               },
               {
                 icon: Users,
                 title: "Teacher Pedagogy",
-                desc: "Strengthens teaching methods by providing teachers with tools to facilitate research thinking.",
-                color: "from-amber-500 to-orange-500"
+                desc: "Strengthens teaching methods by providing teachers with tools to facilitate research thinking."
               }
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="glass-card p-12 rounded-[48px] hover:border-white/20 transition-all group relative overflow-hidden"
+                className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex gap-6 items-start"
               >
-                <div className={cn("absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-5 blur-2xl -mr-16 -mt-16 transition-opacity group-hover:opacity-20", item.color)} />
-                <div className={cn("w-20 h-20 rounded-3xl flex items-center justify-center text-white mb-8 shadow-2xl bg-gradient-to-br transition-transform group-hover:scale-110 group-hover:rotate-3", item.color)}>
-                  <item.icon size={36} />
+                <div className="shrink-0 w-12 h-12 rounded-lg bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                  <item.icon size={24} />
                 </div>
-                <h3 className="text-2xl font-black text-white mb-4 tracking-tight">{item.title}</h3>
-                <p className="text-slate-400 text-lg leading-relaxed">{item.desc}</p>
-              </motion.div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <div className="space-y-10">
-            <div className="inline-block px-6 py-2 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-[10px] font-black uppercase tracking-[0.4em]">
-              The Advantage
+      <section className="section-padding bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12">
+          <div className="space-y-8">
+            <div className="pb-6 border-b-2 border-slate-200">
+              <span className="text-brand-primary text-[11px] font-bold uppercase tracking-widest bg-brand-secondary/10 px-2 py-1">The Advantage</span>
+              <h2 className="text-4xl font-black text-slate-900 tracking-tight mt-2">Benefits for Schools</h2>
             </div>
-            <h2 className="text-6xl font-black text-white tracking-tighter leading-tight">Benefits for Schools</h2>
-            <p className="text-xl text-slate-400 leading-relaxed max-w-xl">
+            <p className="text-lg text-slate-600 leading-relaxed">
               Partnering with The Learning Marathon provides your school with a distinct academic edge and professional recognition.
             </p>
-            <div className="space-y-8">
+            <ul className="space-y-6 pt-4">
               {[
                 {
                   title: "Recognition as a Research-Ready School",
                   desc: "A prestigious certification that highlights your school's commitment to advanced learning methodologies."
                 },
                 {
-                  title: "Teacher Certification",
-                  desc: "Professional development and certification for teachers in research facilitation and deep reading pedagogy."
+                  title: "Teacher Training & Certification",
+                  desc: "Educators receive specialized training in research pedagogy and mentoring."
                 },
                 {
-                  title: "Academic Differentiation",
-                  desc: "Stand out as an institution that values thinking and depth beyond standard marks and grades."
+                  title: "National Exposure for Students",
+                  desc: "Top-performing students earn the opportunity to represent the school at the national MBitious Carnival."
                 }
-              ].map((benefit, i) => (
-                <motion.div 
-                  key={i} 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex gap-8 p-8 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
-                >
-                  <div className="shrink-0 w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all shadow-xl">
-                    <CheckCircle2 size={32} />
+              ].map((item, i) => (
+                <li key={i} className="flex gap-4 items-start">
+                  <div className="shrink-0 w-6 h-6 rounded-full bg-brand-secondary/20 text-brand-secondary flex items-center justify-center border border-brand-secondary/30 mt-0.5">
+                    <CheckCircle2 size={12} />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-black text-white mb-3 tracking-tight">{benefit.title}</h4>
-                    <p className="text-slate-400 text-lg leading-relaxed">{benefit.desc}</p>
+                    <h4 className="font-bold text-slate-900">{item.title}</h4>
+                    <p className="text-slate-600 leading-relaxed mt-1">{item.desc}</p>
                   </div>
-                </motion.div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-brand-primary/20 rounded-[80px] blur-3xl opacity-20 group-hover:opacity-40 transition-opacity" />
-            <div className="relative glass-card p-6 rounded-[80px] rotate-2 transition-transform duration-1000 group-hover:rotate-0">
+          
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white p-2">
               <img 
-                src="https://picsum.photos/seed/school-saas/1200/1000" 
+                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" 
                 alt="School recognition" 
-                className="rounded-[60px] shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-1000"
+                className="rounded-lg w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent rounded-[60px]" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding">
-        <div className="max-w-5xl mx-auto glass-card p-16 md:p-32 rounded-[80px] text-center space-y-12 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-primary/10 to-transparent" />
-          <h2 className="text-6xl font-black text-white tracking-tighter leading-[0.9]">Become a <br /> Partner School</h2>
-          <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Join a network of forward-thinking institutions dedicated to restoring the joy of learning.
+      {/* Final CTA */}
+      <section className="py-24 bg-brand-primary text-center">
+        <div className="max-w-3xl mx-auto px-6 space-y-8">
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">Bring The Learning <br /> Marathon to Your School</h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+            Let's discuss how we can integrate this research-driven program into your academic framework.
           </p>
-          <div className="pt-8">
-            <button className="btn-primary text-2xl px-16 py-8 rounded-[32px]">
-              Schedule a Presentation
+          <div className="pt-6">
+            <button className="bg-white text-brand-primary px-10 py-3 rounded-md uppercase tracking-wider font-semibold hover:bg-slate-50 transition-colors">
+              Schedule a Meeting
             </button>
           </div>
         </div>

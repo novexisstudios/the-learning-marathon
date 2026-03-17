@@ -26,57 +26,48 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-8',
-        scrolled ? 'py-4' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-slate-200 shadow-sm',
+        scrolled ? 'py-2' : 'py-4'
       )}
     >
-      <div className={cn(
-        "max-w-7xl mx-auto flex items-center justify-between px-8 py-4 rounded-[32px] transition-all duration-500",
-        scrolled ? "glass-nav shadow-[0_20px_50px_rgba(0,0,0,0.5)]" : "bg-transparent"
-      )}>
-        <Link to="/" className="flex items-center gap-4 group">
-          <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center text-white shadow-2xl group-hover:rotate-12 transition-transform duration-500">
-            <BookOpen size={24} />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-black tracking-tighter text-white leading-none">
-              Learning Marathon
-            </span>
-            <span className="text-[8px] uppercase tracking-[0.5em] text-brand-primary font-black mt-1">
-              ReadFirst Initiative
-            </span>
-          </div>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8">
+        <Link to="/" className="flex items-center gap-4 group py-2">
+          <img 
+            src="/logo.png" 
+            alt="The Learning Marathon Logo" 
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
+          />
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'text-[11px] uppercase tracking-[0.2em] font-black px-5 py-2.5 rounded-2xl transition-all duration-300',
+                'text-[13px] uppercase tracking-wider font-semibold px-2 py-1 transition-colors duration-200',
                 location.pathname === link.path 
-                  ? 'text-white bg-white/10 shadow-inner' 
-                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  ? 'text-brand-primary border-b-2 border-brand-primary'
+                  : 'text-slate-600 hover:text-brand-primary'
               )}
             >
               {link.name}
             </Link>
           ))}
-          <div className="ml-6 pl-6 border-l border-white/10">
+          <div className="ml-4 pl-6 border-l border-slate-200">
             <Link
               to="/contact"
-              className="bg-white text-slate-950 px-8 py-3 rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] hover:bg-brand-primary hover:text-white transition-all shadow-[0_10px_30px_rgba(255,255,255,0.1)] active:scale-95"
+              className="btn-primary px-6 py-2.5"
             >
-              Join Us
+              Partner With Us
             </Link>
           </div>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-white p-3 hover:bg-white/5 rounded-2xl transition-colors"
+          className="lg:hidden p-3 rounded-xl transition-colors text-slate-600 hover:bg-slate-100 hover:text-slate-900"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -87,10 +78,10 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: -20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -20 }}
-            className="lg:hidden absolute top-full left-6 right-6 mt-6 bg-slate-950/95 backdrop-blur-3xl border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] rounded-[40px] p-10 flex flex-col gap-6 z-50"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-200 shadow-md p-6 flex flex-col gap-2 z-50"
           >
             {navLinks.map((link) => (
               <Link
@@ -98,10 +89,10 @@ export default function Navbar() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  'text-3xl font-black py-4 px-6 rounded-3xl transition-all tracking-tighter',
+                  'text-lg font-semibold py-3 px-4 rounded-md transition-colors',
                   location.pathname === link.path 
-                    ? 'text-white bg-brand-primary/20 shadow-inner' 
-                    : 'text-slate-400'
+                    ? 'text-brand-primary bg-slate-50' 
+                    : 'text-slate-600 hover:bg-slate-50'
                 )}
               >
                 {link.name}
@@ -110,9 +101,9 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-6 rounded-3xl text-center text-xl font-black tracking-tight mt-6 shadow-2xl active:scale-95"
+              className="bg-brand-primary text-white px-6 py-4 rounded-md text-center text-[13px] font-semibold uppercase tracking-wider mt-4"
             >
-              Join Us
+              Partner With Us
             </Link>
           </motion.div>
         )}
