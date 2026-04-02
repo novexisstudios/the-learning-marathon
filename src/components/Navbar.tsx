@@ -1,20 +1,20 @@
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
+import { motion, AnimatePresence } from "motion/react";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: 'About', path: '#about' },
-  { name: 'Program', path: '#program' },
-  { name: 'For Schools', path: '#schools' },
-  { name: 'Impact Stories', path: '#impact' },
-  { name: 'Contact', path: '#contact' },
+  { name: "About", path: "#about" },
+  { name: "Program", path: "#program" },
+  { name: "For Schools", path: "#schools" },
+  { name: "Impact Stories", path: "#impact" },
+  { name: "Contact", path: "#contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +22,7 @@ export default function Navbar() {
 
       // Determine which section is currently in view
       const ids = navLinks.map((l) => l.path.slice(1));
-      let current = '';
+      let current = "";
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -32,8 +32,8 @@ export default function Navbar() {
       setActiveSection(current);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = () => setIsOpen(false);
@@ -41,20 +41,19 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-2'
-          : 'bg-white border-b border-slate-100 py-4'
+          ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-2"
+          : "bg-white border-b border-slate-100 py-4",
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8">
-
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group py-1.5 shrink-0">
+        <a href="" className="flex items-center gap-3 group py-1.5 shrink-0">
           <img
-            src="/logo.png"
+            src="/logo2.png"
             alt="The Learning Marathon"
-            className="h-11 w-auto object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
+            className="h-20 w-auto object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
           />
         </a>
 
@@ -65,10 +64,10 @@ export default function Navbar() {
               key={link.path}
               href={link.path}
               className={cn(
-                'relative text-[12.5px] uppercase tracking-wider font-bold px-3 py-2 rounded-lg transition-all duration-200',
+                "relative text-[12.5px] uppercase tracking-wider font-bold px-3 py-2 rounded-lg transition-all duration-200",
                 activeSection === link.path
-                  ? 'text-brand-primary bg-brand-primary/6'
-                  : 'text-slate-500 hover:text-brand-primary hover:bg-brand-primary/5'
+                  ? "text-brand-primary bg-brand-primary/6"
+                  : "text-slate-500 hover:text-brand-primary hover:bg-brand-primary/5",
               )}
             >
               {link.name}
@@ -79,7 +78,10 @@ export default function Navbar() {
           ))}
 
           <div className="ml-4 pl-4 border-l border-slate-200">
-            <a href="#contact" className="btn-primary px-6 py-2.5 inline-block text-[12.5px]">
+            <a
+              href="#contact"
+              className="btn-primary px-6 py-2.5 inline-block text-[12.5px]"
+            >
               Sign Up
             </a>
           </div>
@@ -111,10 +113,10 @@ export default function Navbar() {
                 href={link.path}
                 onClick={handleLinkClick}
                 className={cn(
-                  'text-base font-bold py-3 px-4 rounded-xl transition-colors',
+                  "text-base font-bold py-3 px-4 rounded-xl transition-colors",
                   activeSection === link.path
-                    ? 'text-brand-primary bg-brand-primary/6'
-                    : 'text-slate-600 hover:bg-slate-50 hover:text-brand-primary'
+                    ? "text-brand-primary bg-brand-primary/6"
+                    : "text-slate-600 hover:bg-slate-50 hover:text-brand-primary",
                 )}
               >
                 {link.name}

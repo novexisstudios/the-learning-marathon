@@ -53,8 +53,8 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-white/10 border border-brand-secondary/30 text-brand-secondary text-xs font-bold tracking-widest uppercase backdrop-blur-sm"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse" />
-              A Research-Based Learning Initiative
+              {/* <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse" /> */}
+              A Research-Based Learning Experience 
             </motion.div>
 
             {/* Heading */}
@@ -72,7 +72,7 @@ export default function HeroSection() {
               What if learning were measured by depth, not marks?
             </p>
             <p className="text-base lg:text-lg text-white/70 leading-relaxed mb-8 max-w-xl">
-              A structured, research-backed academic journey that trains students <em>and</em> teachers in how learning actually works — not what to memorise, but how to think.
+              A structured, research-backed academic journey that trains students <em>and</em> teachers in how learning actually works, not what to memorise, but how to think.
             </p>
 
             {/* Meta pills */}
@@ -114,14 +114,14 @@ export default function HeroSection() {
             className="relative"
           >
             {/* Floating badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55 }}
               className="absolute -top-5 -right-4 z-20 px-4 py-2 rounded-full bg-brand-secondary text-black text-xs font-black uppercase tracking-widest shadow-xl animate-float"
             >
               School-Integrated
-            </motion.div>
+            </motion.div> */}
 
             <div className="relative bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-8 overflow-hidden shadow-2xl">
               {/* Card glow */}

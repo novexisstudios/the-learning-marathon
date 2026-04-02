@@ -29,7 +29,7 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium mb-14 max-w-3xl mx-auto">
-            Students struggle not because they lack intelligence — but because they were never trained in <em>how</em> to learn.
+            Students struggle not because they lack intelligence, but because they were never trained in <em>how</em> to learn.
           </p>
 
           {/* Pain-point cards */}

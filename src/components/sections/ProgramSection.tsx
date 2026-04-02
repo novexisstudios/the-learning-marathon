@@ -69,7 +69,7 @@ export default function ProgramSection() {
               <span className="text-brand-primary">It is proof-backed.</span>
             </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium">
-              Every stakeholder benefits — students, teachers, and institutions alike.
+              Every stakeholder benefits - students, teachers, and institutions alike.
             </p>
           </motion.div>
         </div>

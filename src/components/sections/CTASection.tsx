@@ -40,7 +40,7 @@ export default function CTASection() {
           </h2>
 
           <p className="text-xl md:text-2xl text-white/80 font-medium mb-14 max-w-3xl mx-auto leading-relaxed">
-            We aim to identify and nurture high-potential thinkers early — without marks, without age barriers, without performance pressure.
+            We aim to identify and nurture high-potential thinkers early, without marks, without age barriers, without performance pressure.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
