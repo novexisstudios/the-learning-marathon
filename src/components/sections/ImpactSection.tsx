@@ -3,25 +3,32 @@ import { Quote } from 'lucide-react';
 
 const stories = [
   {
-    name: 'Student A',
-    role: 'Class 8',
-    initial: 'A',
+    name: 'Manaswi Mishra',
+    role: 'Student',
+    initial: 'M',
     content:
-      'The reading habits I developed here transformed how I approach my science projects. I no longer rely solely on my textbooks.',
+      'I am delighted to have found Orison , a revolutionary establishment that has redefined the meaning of quality education. What truly sets Orison apart from traditional school systems is their unique approach to teaching. Instead of relying on rote memorization and standardized testing, they foster a love for learning by encouraging critical thinking, problem-solving, and creativity also placing a strong emphasis on research and development. I wholeheartedly recommend Orison to students seeking an exceptional educational experience. It is a place where students are not just taught but inspired, where the pursuit of knowledge is celebrated, and where character development is as vital as academic achievement.',
   },
   {
-    name: 'Student B',
-    role: 'Class 9',
-    initial: 'B',
+    name: 'Fanindra Saini',
+    role: 'Student',
+    initial: 'F',
     content:
-      'Before the Marathon, I was afraid of speaking up because I thought my thoughts were "wrong". Now I know how to structure my research.',
+      'Being a part of mbitious program by Orison is a life changing experience for me, I have learned many important lessons that can bring happiness and self satisfaction to our life. I had really enjoyed being with the Orison family, made many new friends. One of the important things that I learned is SMILE (Self motivated insightful learning), hence today also I SMILE everyday.',
   },
   {
-    name: 'Student C',
-    role: 'Class 7',
-    initial: 'C',
+    name: 'Jyoti Kumawat',
+    role: 'Parent',
+    initial: 'J',
     content:
-      'I started reading books outside my syllabus. The deep reading phase opened my eyes to independent thinking.',
+      'Unlike today\'s schools where the rat race is the only trend, I was looking for a place where my son,Kush, can get a holistic development and learning not only just academically but spiritually, mentally and emotionally too. My search ended up with OLS and the best part of OLS is that not only Kush is excelling here ,infact we parents are also getting chance to excel ourself. The only place you will find where kids and parents learn together. Thank you so much Piyush Sir and the whole Orison Learning Studio for providing such a beautiful platform. 🙏💗',
+  },
+  {
+    name: 'Rutuja Gaikwad',
+    role: 'Student',
+    initial: 'R',
+    content:
+      'Piyush Keshav is the best mentor I’ve ever had in my life. The unique teaching processes at orison are helpful in procuring knowledge and wisdom. The learning skills a student acquired at orison remains with him all throughout his life. Orison is all about pragmatic solutions to every student’s issues. Worth trying💯',
   },
 ];
 
@@ -51,7 +58,7 @@ export default function ImpactSection() {
         </div>
 
         {/* Testimonial cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {stories.map((story, i) => (
             <motion.div
               key={i}
