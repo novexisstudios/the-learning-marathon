@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="space-y-6 lg:col-span-1">
           <a href="#" className="flex items-center gap-3 group w-fit">
             <img
-              src="/logo2.png"
+              src="/tlm-logo.png"
               alt="The Learning Marathon Logo"
               className="h-12 w-auto object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
             />

@@ -43,7 +43,7 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-2"
+          ? "bg-white backdrop-blur-md border-b border-slate-200 shadow-sm py-2"
           : "bg-white border-b border-slate-100 py-4",
       )}
     >
@@ -51,7 +51,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="" className="flex items-center gap-3 group py-1.5 shrink-0">
           <img
-            src="/logo2.png"
+            src="/tlm-logo.png"
             alt="The Learning Marathon"
             className="h-20 w-auto object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
           />
