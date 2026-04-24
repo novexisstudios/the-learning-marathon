@@ -34,9 +34,9 @@ export default function CTASection() {
           </div>
 
           <h2 className="text-3xl lg:text-5xl font-black text-white mb-8 leading-tight">
-            We are looking for a Narendranath{' '}
+            We are searching for the next Srinivas and Narendranath{' '}
             <br className="hidden md:block" />
-            <span className="text-brand-secondary">before he becomes Swami Vivekananda.</span>
+            <span className="text-brand-secondary">from every last mile of the nation.</span>
           </h2>
 
           <p className="text-xl md:text-2xl text-white/80 font-medium mb-14 max-w-3xl mx-auto leading-relaxed">

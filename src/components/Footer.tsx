@@ -99,17 +99,17 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-center gap-4 group">
-              <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-brand-secondary group-hover:bg-brand-secondary/5 group-hover:border-brand-secondary/20 transition-all duration-200 shadow-sm shrink-0">
+              {/* <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-brand-secondary group-hover:bg-brand-secondary/5 group-hover:border-brand-secondary/20 transition-all duration-200 shadow-sm shrink-0">
                 <Globe size={16} />
-              </div>
-              <a
+              </div> */}
+              {/* <a
                 href="https://www.thelearningmarathon.in"
                 target="_blank"
                 rel="noreferrer"
                 className="text-sm font-semibold text-slate-600 hover:text-brand-secondary transition-colors duration-200"
               >
                 thelearningmarathon.in
-              </a>
+              </a> */}
             </li>
           </ul>
         </div>
@@ -120,7 +120,7 @@ export default function Footer() {
         <p>© 2026 The Learning Marathon. All rights reserved.</p>
         <div className="flex items-center gap-3">
           <span className="w-6 h-px bg-slate-200" />
-          <p className="text-brand-primary">A ReadFirst Initiative</p>
+          {/* <p className="text-brand-primary">A ReadFirst Initiative</p> */}
           <span className="w-6 h-px bg-slate-200" />
         </div>
       </div>

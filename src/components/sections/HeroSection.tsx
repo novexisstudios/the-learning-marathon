@@ -58,7 +58,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Heading */}
-            <h1 className="text-5xl lg:text-[68px] xl:text-[76px] font-black text-white tracking-tighter leading-[1.05] mb-6">
+            <h1 className="text-4xl lg:text-[60px] xl:text-[68px] font-black text-white tracking-tighter leading-[1.05] mb-6">
               THE{' '}
               <span className="relative inline-block">
                 <span className="text-brand-secondary">LEARNING</span>

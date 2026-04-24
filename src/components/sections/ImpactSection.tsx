@@ -70,7 +70,7 @@ export default function ImpactSection() {
             >
               <Quote className="w-9 h-9 text-brand-secondary/35 absolute top-6 right-6" />
 
-              <p className="text-slate-700 italic font-medium leading-relaxed flex-1 relative z-10">
+              <p className="text-slate-700 italic font-medium leading-relaxed flex-1 relative z-10 mt-6">
                 "{story.content}"
               </p>
 
